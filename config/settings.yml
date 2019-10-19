@@ -1,0 +1,11 @@
+user_page: 20
+post_page: 20
+admin_user_page: 10
+admin_activity_page: 20
+min_length_text: 100
+max_length_text: 600
+recent_post: 5
+post_homepage: 1
+video_pages: 10
+video_homepage: 3
+role_admin: "admin" 

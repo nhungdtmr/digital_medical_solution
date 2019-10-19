@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= "digital medical solution" %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag Ckeditor.cdn_url %>
+  </head>
+
+  <body>
+    <%= render "layouts/header" %>
+    <%= render "welcomes/login_modal" %>
+    <%= render "welcomes/sign_up_modal" %>
+    <%= render "welcomes/forgot_pass_modal" %>
+    <%= render "welcomes/edit_modal" %>
+    <div class="body_padding">
+      <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
+  </body>
+</html>

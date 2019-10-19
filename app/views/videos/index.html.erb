@@ -1,0 +1,29 @@
+<section id="blog_fashion" class="blog_fashion roomy-50">
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+        <h4><%= t ".videos" %></h4>
+      </div>
+      <div class="col-md-12">
+        <div class="blog_area fix">
+          <% @videos.each do |video| %>
+            <div class="col-md-4">
+              <div class="blog_item m-top-30">
+                <div class="blog_item_img">
+                  <%= video_tag video.video_url.to_s, controls: true %>
+                </div>
+                <ol class="breadcrumb">
+                  <li class="text-black"><%= video.user_name %></li>
+                  <li class="text-black"><%= video.created_at %></li>
+                </ol>
+                <div class="tẽt-center">
+                  <h4><%= link_to video.name, video_path(video.id) %></h4>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

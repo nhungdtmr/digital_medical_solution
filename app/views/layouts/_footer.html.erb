@@ -1,0 +1,52 @@
+<footer id="footer" class="footer bg-mega">
+  <div class="container">
+    <section id="action" class="action roomy-40">
+      <div class="container">
+        <div class="row">
+          <div class="main_action text-center">
+            <div class="col-md-4">
+              <div class="action_item">
+                <i class="fa fa-map-marker"></i>
+                <h4 class="text-uppercase m-top-20"><%= t ".address" %></h4>
+                <p><%= t ".detail" %></p>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="contact_img">
+                <div class="mapouter-fo">
+                  <div class="gmap_canvas-fo">
+                    <iframe width="687" height="172" id="gmap_canvas" src="https://maps.google.com/maps?q=handico&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="row">
+      <div class="main_footer p-top-40 p-bottom-30">
+        <div class="col-md-6 text-left sm-text-center">
+          <p class="wow fadeInRight" data-wow-duration="1s"><%= t "made_by" %>
+            <i class="fa fa-heart"></i>
+            <%= "Sói Biển" %>
+          </p>
+        </div>
+        <div class="col-md-6 text-right sm-text-center sm-m-top-20">
+          <ul class="list-inline">
+            <li>
+              <%= link_to do %>
+                <i class="fa fa-facebook"></i>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to do %>
+                <i class="fa fa-google"></i>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

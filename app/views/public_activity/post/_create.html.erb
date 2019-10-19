@@ -1,0 +1,6 @@
+<%= t ".add_post" %>
+<% if activity.trackable %>
+  <%= link_to activity.trackable.title, post_path(activity.trackable.id) %>
+<% else %>
+  <%= t ".error" %>
+<% end %>

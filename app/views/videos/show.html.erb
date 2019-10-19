@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="blog_details_head m-top-40">
+      <div class="head_text">
+        <h2><%= @video.name %></h2>
+        <ul class="list-inline">
+          <li class="text-black"><%= @video.user_name %><%= t ".stroke" %></li>
+          <li text-black><%= l(@video.created_at, format: :default) %></li>
+          <% if user_signed_in? %>
+            <% if current_user? @video.user_id %>
+              <li><%= link_to t(".edit"), edit_video_path(@video.id) %></li>
+              <li><%= link_to t(".delete"), video_path(@video.id), method: :delete, data: {confirm: t(".confirm_delete")}, class: "delete" %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div> 
+    <div class="blog_details_figure m-top-40">
+        <p><%= video_tag @video.video_url.to_s, controls: true, class:"video_view" %></p>
+    </div>
+    <div class="socail_share text-right m-top-60">
+      <ul class="list-inline text-uppercase">
+        <li><%= t ".share" %></li>
+        <li><%= social_share_button_tag(@video.name) %></li>
+      </ul>
+    </div>
+    <hr />
+  </div>
+</div>
+<div class="scrollup">
+  <a href="#"><i class="fa fa-chevron-up"></i></a>
+</div>

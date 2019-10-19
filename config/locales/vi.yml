@@ -1,0 +1,239 @@
+vi:
+  time:
+    formats:
+      default: "%H:%M:%S | %d, %B, %Y"
+      long: "%d, %b "
+      short: "%Y"
+  admin:
+    activities:
+      index:
+        title: "Hoạt động"
+    posts:
+      index:
+        title: "Tất cả bài viết"
+        confirm_delete: "Bạn chắc chắn chứ?"
+        index: "STT"
+        title_post: "Tiêu đề"
+        content: "Nội dung"
+        delete: "Xóa"
+        read_more: "Đọc thêm"
+    users:
+      index:
+        title: "Tất cả người dùng"
+        confirm_delete: "Bạn chắc chắn chứ?"
+        index: "STT"
+        email: "Email"
+        delete: "Xóa"
+        name: "Tên"
+        phone: "Số điện thoại"
+        address: "Địa chỉ"
+        delete_fail: "Không xóa được"
+        delete_success: "Xóa thành công"
+    videos:
+      index:
+        title: "Tất cả video"
+        confirm_delete: "Bạn chắc chắn chứ?"
+        index: "STT"
+        title_video: "Tiêu đề"
+        content: "Video"
+        delete: "Xóa"
+  comments:
+    comment:
+      reply: "Trả lời"
+      delete: "Xóa"
+      confirm_delete: "Bạn chắc chắn chứ?"
+    form:
+      write_comment: "Viết bình luận"
+      comment: "Bình luận"
+      not_member: "Không phải thành viên, hãy đăng nhập!"
+      sign_in: "Đăng nhập để bình luận"
+  devise:
+    confirmations:
+      new:
+        title: "Gửi lại hướng dẫn xác nhận"
+    mailer:
+      confirmation_instructions:
+        welcome: "Chào mừng bạn"
+        content: "Bạn có thể xác nhận email tài khoản của mình thông qua liên kết dưới đây:"
+        confirm: "Xác nhận tài khoản của tôi"
+    shared:
+      links:
+        sign_up: "Đăng ký tài khoản mới"
+        forgot_pass: "Quên mật khẩu?"
+        sign_in_with: "Đăng nhập với Google!"
+  follows:
+    follow_form:
+      unfollow: "Hủy theo dõi"
+      follow: "Theo dõi"
+  layouts:
+    application:
+      title: "Yoga Sprouts"
+    header:
+      title: "Yoga Sprouts"
+      home: "Yoga"
+      contact: "Liên hệ"
+      asana: "Asana"
+      post: "Bài viết"
+      practice: "Thực hành"
+      yoga: "Yoga +"
+      video: "Video"
+      life: "Sống"
+      awakelive: "Sống tỉnh thức"
+      live_excitedly: "Sống hứng khởi"
+      happy_life: "Sống hạnh phúc"
+      quotations: "Yoga mang bạn hòa mình vào thiên nhiên và dạy cho bạn cách tò mò một cách hào hứng về thế giới tâm hồn."
+      author: "Debasish Mridha"
+      learn_more: "Tìm hiểu thêm"
+      upload: "Tạo bài viết & video"
+      create_post: "Tạo bài viết mới"
+      create_video: "Tải Video lên"
+      sign_in: "Đăng nhập"
+      admin_page: "Trang quản lý"
+      edit: "Sửa profile"
+      logout: "Đăng xuất"
+    footer:
+      made: "Tạo bởi"
+      team: "JoyTeam"
+      address: "Địa chỉ"
+      detail: "Tòa Handico, Hà Nội, Việt Nam"
+    admin_layout:
+      title: "Admin page"
+    admin_nav_top:
+      web: "Website"
+      title: "Trang quản lý"
+    admin_nav_side:
+      users: "Quản lý người dùng"
+      all_user: " Tất cả người dùng"
+      all_post: "Tất cả bài viết"
+      all_video: "Tất cả video"
+      activity: "Hoạt động"
+  message_mailer:
+    contact_me:
+      subject: "Message from www.murdo.ch"
+      message: "Message"
+  messages:
+    new: 
+      contact: "Liên hệ với chúng tôi để có những lời khuyên hữu ích nhất!"
+      address: "Địa chỉ"
+      detail: "Tòa Handico, Hà Nội, Việt Nam"
+      phone: "Số điện thoại"
+      phone1: "(+84) - 123 - 456 - 789"
+      phone2: "(+84) - 321 - 654 - 987"
+      email: "Email"
+      email1: "abc@gmail.com"
+      email2: "xyz@yahoo.com"
+      your_name: "Tên *"
+      your_email: "Email *"
+      your_message: "Nội dung *"
+      send: "Gửi"
+    create:
+      received: "Chúng tôi đã nhận được tin nhắn của bạn và sẽ liên lạc sớm!"
+      error: "Có lỗi khi gửi tin nhắn của bạn. Vui lòng thử lại."
+  posts:
+    index:
+      read_more: "...Đọc thêm"
+      vote: "Lượt thích: "
+    new:
+      new_post_title: "Tạo bài viết"
+      save: "Đăng bài"
+      create_success: "Tạo thành công"
+      create_fail: "Lỗi"
+    show:
+      no_post: "Không có bài viết"
+      share: "Chia sẻ bài viết này"
+      category: "Danh mục"
+      relative_post: "Bài viết liên quan"
+      confirm_delete: "Bạn có chắc chắn muốn xóa bài viết này chứ?"
+      edit: "Sửa"
+      delete: "Xóa"
+      space: " "
+      stroke: " /"
+      post_by: "Đăng bởi: "
+      comment: "Bình luận"
+      comment_count: " Bình luận: "
+      author1: "Bob Harper"
+      content1: "Yoga là suối dòng của tuổi trẻ. Bạn chỉ có thể trẻ mãi khi xương cốt của mình dẻo dai."
+      author2: "T. Guillemets"
+      content2: "Một nhiếp ảnh gia khiến người khác tạo dáng cho các bức ảnh của mình. Một giáo viên Yoga khiến người khác tạo dáng cho chính bản thân họ."
+    edit:
+      title: "Sửa bài viết"
+      update: "Cập nhật"
+  public_activity:
+    comment:
+      create:
+        add_comment: "Bình luận bài viết của"
+        error: "Lỗi"
+        remove_comment: "Xóa bình luận"
+    post:
+      create:
+        add_post: "Tạo mới bài viết"
+        error: "Lỗi"
+      update:
+        update: "Sửa bài viết"
+        error: "Lỗi"
+      destroy:
+        destroy: "Xóa bài viết"
+        error: "Lỗi"
+    video:
+      create:
+        add_video: "Thêm video"
+        error: "Lỗi"
+      update:
+        update: "Sửa video"
+        error: "Lỗi"
+      destroy:
+        destroy: "Xóa video"
+        error: Lỗi
+  static_pages:
+    home:
+      quotations: "Yoga mang bạn hòa mình vào thiên nhiên và dạy cho bạn cách tò mò một cách hào hứng về thế giới tâm hồn."
+      author: "Debasish Mridha"
+      yogis_read: "Yogis đọc"
+      description: "Những bài viết về thực hành và lối sống yoga được Yoga Sprouts chọn lọc viết và dịch. Hy vọng bạn sẽ tìm thấy những thông tin, kiến thức hay câu chuyện hữu ích"
+      yogis_watch: "Yogis xem"
+      des_watch: "Những video hay và bổ ích được Yoga Sprouts tuyển chọn dịch và phụ đề"
+      read_more: "...đọc thêm"
+  videos:
+    no_video: "Không có video nào"
+    new:
+      title: "Tải video"
+      save: "Lưu"
+    index:
+      videos: "VIDEOS"
+      stroke: " |"
+    edit:
+      title: "Sửa video"
+      update: "Cập nhật"
+    show:
+      stroke: " |"
+      confirm_delete: "Bạn có chắc chắn muốn xóa video này chứ?"
+      edit: "Sửa"
+      delete: "Xóa"
+      share: "Chia sẻ"
+  votes:
+    vote_form:
+      vote: "Lượt thích: "
+  welcomes:
+    login_modal:
+      sign_in: "Đăng nhập"
+      email: "Email"
+      pass: "Mật khẩu"
+      close: "Đóng"
+    sign_up_modal:
+      sign_up: "Đăng ký tài khoản mới"
+      save: "Đăng ký"
+      close: "Đóng"
+    forgot_pass_modal:
+      forgot_pass_title: "Quên mật khẩu"
+      send: "Gửi cho tôi hướng dẫn đặt lại mật khẩu"
+      close: "Đóng"
+    edit_modal:
+      title: "Sửa thông tin "
+      notice: "để trống nếu bạn không muốn thay đổi"
+      minimum: "Tối thiểu ký tự"
+      confirm: "Hiện đang chờ xác nhận cho: "
+      current_confirm: "(chúng tôi cần mật khẩu hiện tại của bạn để xác nhận thay đổi của bạn)"
+      update: "Cập nhật"
+      cancel: "Hủy tài khoản của tôi"
+      sure: Bạn có chắc chứ?
+      close: "Đóng"

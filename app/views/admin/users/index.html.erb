@@ -1,0 +1,49 @@
+<div id="page-wrapper">
+  <div id="page-inner">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><%= t ".title" %></h2>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th><%= t ".index" %></th>
+                <th><%= t ".name" %></th>
+                <th><%= t ".email" %></th>
+                <th><%= t ".phone" %></th>
+                <th><%= t ".address" %></th>
+                <th><%= t ".delete" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @users.each.with_index do |user, index| %>
+                <tr class="info">
+                  <td>
+                    <%= create_index params[:page], index, Settings.admin_user_page %>
+                  </td>
+                  <td><%= user.name %></td>
+                  <td><%= user.email %></td>
+                  <td><%= user.phone_number %></td>
+                  <td><%= user.address %></td>
+                  <td>
+                    <%= link_to raw("<span class='glyphicon glyphicon-trash text-danger'></span>"), [:admin, user], method: :delete,
+                    data: {confirm: t(".confirm_delete"), remote: true}, class: "delete" %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <div class="pani-center">
+            <%= paginate @users, theme: 'twitter-bootstrap-3'%>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </div>
+</div>

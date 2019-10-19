@@ -1,0 +1,29 @@
+<section id="blog_fashion" class="blog_fashion roomy-100">
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+        <h4><%= @category %></h4>
+      </div>
+      <div class="blog_area fix">
+        <% @posts.each do |post| %>
+          <div class="col-md-4">
+            <div class="blog_item m-top-30">
+              <div class="blog_item_img">
+                <%= image_tag post.thumbnail.to_s, alt: "", class: "image" %>
+              </div>
+              <ol class="breadcrumb">
+                <li><a href="#" class="text-black"><%= post.category_name %></a></li>
+                <li class="text-black">
+                  <%= t ".vote" %>
+                  <%= post.get_upvotes.size %>
+                  <span class="glyphicon glyphicon-heart" id="glyphicon-index"></span>
+                  </li>
+              </ol>
+              <h4><%= link_to post.title, post_path(post.id) %></h4>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
