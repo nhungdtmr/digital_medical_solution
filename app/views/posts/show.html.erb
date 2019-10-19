@@ -1,0 +1,110 @@
+<section id="blog_details" class="blog_details m-top-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="main_blog_details">
+          <div class="blog_details_left">
+            <div class="blog_details_content">
+              <div class="blog_details_head m-top-40">
+                <div class="col-md-2 blog_date">
+                  <span><%= l(@post.created_at, format: :short) %></span> <br />
+                  <span><%= l(@post.created_at, format: :long) %></span>
+                </div>
+                <div class="col-md-10 head_text m-bottom-30">
+                  <h2><%= @post.title %></h2>
+                  <ul class="list-inline">
+                    <li class="text-black"><%= t ".post_by" %><%= @post.user_name %><%= t ".stroke" %></li>
+                    <li>
+                      <% if user_signed_in? %>
+                        <div id="follow_user">
+                          <%= render :partial => "follows/follow_form", :locals => {:user => @user} %>
+                        </div>
+                      <% end %>
+                    </li>
+                    <li><a href="#" class="text-black"><%= t ".comment_count" %><%= @post.comments.count %></a></li>
+                    <% if user_signed_in? %>
+                      <% if current_user? @post.user_id %>
+                        <li class="text-finence"><%= link_to t(".edit"), edit_post_path(@post.id) %><%= t ".stroke" %></li>
+                        <li class="text-finence"><%= link_to t(".delete"), post_path(@post.id), method: :delete, data: {confirm: t(".confirm_delete")}, class: "delete" %></li>
+                      <% end %>
+                    <% end %>
+                  </ul>
+                </div>
+              </div> 
+              <div class="blog_details_figure m-top-40">
+                <p><%= @post.content.html_safe %></p>
+              </div>
+              <hr>
+              <div>
+                <div class="socail_share text-left col-md-4">
+                  <%= render "votes/vote_form", post: @post %>
+                </div>
+                <div class="socail_share text-right">
+                  <ul class="list-inline text-uppercase">
+                    <li><%= t ".share" %></li>
+                    <li><%= social_share_button_tag(@post.title) %></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="blog_comments">
+          <h4 class="m-bottom-30"><%= t ".comment" %></h4>
+          <div class="row comment_row" >
+            <%= render "comments/form", post: @post, parent_id: nil, comment_new: @comment %>
+            <%= comments_tree_for @post.comments.hash_tree(limit_depth: 3)%>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="blog_saidbar sm-m-top-70">
+          <div class="said_ctg fix">
+            <div class="blog_fashion_right">
+              <div class="fashion_test text-center">
+                <%= link_to image_tag("yoga2.jpg"), "#" %>
+                <h6 class="m-top-20"><%= t ".author1" %></h6>
+                <p class="m-top-20"><%= t ".content1" %></p>
+                <img class="m-top-20" src="assets/images/blog-sign.png" alt="" />
+              </div>
+              <div class="fashion_praspect m-top-40">
+                <div class="fashion_praspect_inner bg-black">
+                  <p class="text-white"><%= t ".content2" %></p>
+                  <p class="text-white"><%= t ".author2" %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="said_post fix m-top-70">
+          <h6 class="m-bottom-40 text-uppercase"><%= t ".relative_post" %></h6>
+          <% @relative_posts.each do |post| %>
+            <div class="post_item">
+              <div class="item_img">
+                <%= image_tag post.thumbnail.to_s, alt: "" %>
+              </div>
+              <div class="item_text">
+                <h6><%=link_to post.title, post_path(post.id) %></h6>
+                <p><i class="fa fa-clock-o"></i><%= post.created_at %></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div class="said_arc fix m-top-70">
+          <h6 class="text-uppercase">archives</h6>
+          <ul class="m-top-40">
+            <li><a href="">september 2015 <span class="pull-right">(29)</span></a></li>
+            <li><a href="">august 2015 <span class="pull-right">(29)</span></a></li>
+            <li><a href="">july 2015 <span class="pull-right">(29)</span></a></li>
+            <li><a href="">june 2015 <span class="pull-right">(29)</span></a></li>
+          </ul>
+        </div>
+      </div><!-- End off col-md-4 -->
+    </div><!-- End off row -->
+  </div><!-- End off container -->
+</section><!-- End off blog Fashion -->
+<div class="scrollup">
+  <a href="#"><i class="fa fa-chevron-up"></i></a>
+</div><!-- End off scroll up -->

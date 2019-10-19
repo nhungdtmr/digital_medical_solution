@@ -1,0 +1,24 @@
+<div id="page-wrapper">
+  <div id="page-inner">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><%= t ".title" %></h2>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-12">
+        <% @activities.each do |activity| %>
+          <div class="col-md-12 div-activity">
+            <%= link_to activity.owner.email, admin_users_path if activity.owner %>
+            <%= render_activity activity %>
+          <hr>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="pani-center">
+      <%= paginate @activities, theme: 'twitter-bootstrap-3'%>
+    </div>
+  </div>
+</div>

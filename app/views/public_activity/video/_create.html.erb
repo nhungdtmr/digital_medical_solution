@@ -1,0 +1,6 @@
+<%= t ".add_video" %>
+<% if activity.trackable %>
+  <%= link_to activity.trackable.name, activity.trackable.name %>
+<% else %>
+  <%= t ".error" %>
+<% end %>

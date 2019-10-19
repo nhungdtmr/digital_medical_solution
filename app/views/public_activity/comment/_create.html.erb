@@ -1,0 +1,6 @@
+<%= t ".add_comment" %>
+<% if activity.trackable %>
+  <%= link_to activity.trackable.user_email, activity.trackable.user_email %>
+<% else %>
+  <%= t ".error" %>
+<% end %>

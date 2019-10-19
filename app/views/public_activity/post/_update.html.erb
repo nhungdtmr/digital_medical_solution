@@ -1,0 +1,6 @@
+<%= t ".update" %>
+<% if activity.trackable %>
+  <%= link_to activity.trackable.title, activity.trackable.title %>
+<% else %>
+  <%= t ".error" %>
+<% end %>

@@ -1,0 +1,10 @@
+//= require jquery
+//= require bootstrap
+//= require bootstrap-sprockets
+//= require rails-ujs
+//= require activestorage
+//= require jquery.turbolinks
+//= require ckeditor/init
+//= require rails_emoji_picker
+//= require social-share-button
+//= require_tree .

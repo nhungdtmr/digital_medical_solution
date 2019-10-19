@@ -1,0 +1,37 @@
+<div id="comment-<%= comment.id %>" class= "comment">
+  <div class="row">
+    <div class="comment_item">
+      <div class="col-sm-2">
+        <div class="blog_comments_img">
+          <%= link_to image_tag('YMKids logo.png') %>
+        </div>
+      </div>
+      <div class="col-sm-10">
+        <div class="comments_top_tex">
+          <div class="row">
+            <div class="col-sm-10">
+              <h5 class="text-uppercase"><%= comment.user_name %>
+                <small><em><%= l(comment.created_at, format: :default) %></em></small>
+              </h5>
+              <blockquote class="comments_bottom_text m-top-10">
+                <p><%= comment.content %></p>
+              </blockquote>
+            </div>
+              <div class="accordion">
+                <i class="fa fa-mail-reply-all"><%= t ".reply" %></i>
+              </div>
+              <div class="col-md-12" id="demo" class="panel" style="display: none;">
+                <%= render "comments/form", post: @post, parent_id: comment.id, comment_new: comment %>
+              </div>
+              <% if user_signed_in? %>
+                <% if current_user? comment.user_id %>
+                  <%= link_to raw("<span class='fa fa-trash'> Delete</span>"), post_comment_path(comment.id), method: :delete, data: {confirm: t(".confirm_delete"), remote: true}, class: "delete" %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <hr>
+</div>

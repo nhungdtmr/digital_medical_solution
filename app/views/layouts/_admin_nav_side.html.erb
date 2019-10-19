@@ -1,0 +1,29 @@
+<nav class="navbar-default navbar-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul class="nav" id="main-menu">
+      <li class="text-center user-image-back">
+        <img src="assets/img/find_user.png" class="img-responsive" />
+      </li>
+      <li>
+        <ul class="nav" data-toggle="collapse" data-target="#demo1"><span class="fa arrow"></span>
+          <%= t ".users" %>
+          <div id="demo1" class="collapse">
+            <ul>
+              <li>
+                <%= link_to t(".all_user"), admin_users_path %>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <%= link_to t(".all_post"), admin_posts_path %>
+      </li>
+      <li>
+        <%= link_to t(".all_video"), admin_videos_path %>
+      </li>
+      <li>
+        <%= link_to t(".activity"), admin_activities_path %>
+      </li>
+  </div>
+</nav>

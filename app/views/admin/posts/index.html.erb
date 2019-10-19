@@ -1,0 +1,47 @@
+<div id="page-wrapper">
+  <div id="page-inner">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><%= t ".title" %></h2>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th><%= t ".index" %></th>
+                <th><%= t ".category" %></th>
+                <th><%= t ".title_post" %></th>
+                <th><%= t ".content" %></th>
+                <th><%= t ".delete" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @posts.each.with_index do |post, index| %>
+                <tr class="info">
+                  <td>
+                    <%= create_index params[:page], index, Settings.admin_user_page %>
+                  </td>
+                  <td><%= post.category_name %></td>
+                  <td><%= post.title %></td>
+                  <td><%= truncate post.content.html_safe, length: Settings.max_length_text, :omission => "", :escape => false %><%= link_to t(".read_more"), post_path(post.id)%></td>
+                  <td>
+                    <%= link_to raw("<span class='glyphicon glyphicon-trash text-danger'></span>"), [:admin, post], method: :delete,
+                    data: {confirm: t(".confirm_delete"), remote: true}, class: "delete" %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <div class="pani-center">
+            <%= paginate @posts, theme: 'twitter-bootstrap-3'%>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </div>
+</div>

@@ -1,0 +1,278 @@
+<div class="culmn">
+  <section id="hello" class="home bg-mega">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="main_home text-center">
+          <div class="home_text">
+            <h4 class="text-white"><em><%= "Mạng lưới rộng lớn - thông tin chi tiết đã được xác thực" %></em></h4>
+            <h5 class="text-white"><em><%= "Cung cấp dịch vụ tìm kiếm Bệnh Viện, Phòng Khám, Thẩm Mỹ Viện, Trung tâm y tế trên một số thành phố lớn" %></em></h5>
+            <div class="search-bar">
+              <div class="has-suggestion col-md-6">
+                <input class="form-control" type="text" name="keywords" id="keywords" placeholder="Tìm tên bệnh viện, loại bệnh viện">
+              </div>
+              <div class="location col-md-2 col-xs-6">
+                <select class="form-control" id="city_search" style="height: 48px;">
+                  <option value="0">Thành Phố</option>
+                    <option value="ho-chi-minh">Hồ Chí Minh</option>
+                </select>
+              </div>
+              <div class="location col-md-2 col-xs-6">
+                <select class="form-control" id="district_search" style="height: 48px;">
+                  <option value="0">Quận/ huyện</option>
+                </select>
+              </div>
+              <div class="btn-search col-md-2 col-xs-12">
+                <%= link_to show_clinics_path, class: "btn btn-default" do %>
+                  <i class="fa fa-search" aria-hidden="true"></i>Tìm ngay
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="feature" class="feature p-top-100">
+    <div class="container">
+      <div class="row">
+        <div class="main_feature">
+          <div class="col-md-6 m-top-50">
+            <div class="head_title">
+              <h2><%= link_to "Chia sẻ", posts_path %></h2>
+              <h5><em><%= "Chia sẻ những kinh nghiệm khám bệnh..." %></em></h5>
+              <div class="separator_left"></div>
+            </div>
+            <div class="feature_content wow fadeIn m-top-40">
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="feature_photo wow fadeIn sm-m-top-40">
+            <div class="photo_border"></div>
+            <div class="feature_img">
+              <%= link_to image_tag("yoga2.jpg"), "#" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> <!--End off About section -->
+  <section id="gallery" class="gallery margin-top-120 bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="main-gallery roomy-80">
+          <div class="col-md-12">
+            <div class="head_title text-left sm-text-center wow fadeInDown">
+              <h2><%= "Bệnh viện nhà nước" %></h2>
+              <h5><em><%= "Lorem Inspum" %></em></h5>
+              <div class="separator_left"></div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="col-md-4">
+              <div class="grid text-center">
+                <div class="grid-item transition metal ium">
+                  <%= link_to image_tag("bv1.jpg"), "#" %>
+                  <div class="grid_hover_area text-center">
+                    <div class="grid_hover_text m-top-110">
+                      <h4 class="text-white"><%= link_to "meme", "#" %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="grid text-center">
+                <div class="grid-item transition metal ium">
+                  <%= link_to image_tag("bv2.jpg"), "#" %>
+                  <div class="grid_hover_area text-center">
+                    <div class="grid_hover_text m-top-110">
+                      <h4 class="text-white"><%= link_to "meme", "#" %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="grid text-center">
+                <div class="grid-item transition metal ium">
+                  <%= link_to image_tag("bv3.jpeg"), "#" %>
+                  <div class="grid_hover_area text-center">
+                    <div class="grid_hover_text m-top-110">
+                      <h4 class="text-white"><%= link_to "meme", "#" %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gallery" class="gallery margin-top-120 bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="main-gallery roomy-80">
+          <div class="col-md-12">
+            <div class="head_title text-left sm-text-center wow fadeInDown">
+              <h2><%= "Bệnh viện nhà nước" %></h2>
+              <h5><em><%= "Lorem Inspum" %></em></h5>
+              <div class="separator_left"></div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="col-md-4">
+              <div class="grid text-center">
+                <div class="grid-item transition metal ium">
+                  <%= link_to image_tag("yoga2.jpg"), "#" %>
+                  <div class="grid_hover_area text-center">
+                    <div class="grid_hover_text m-top-110">
+                      <h4 class="text-white"><%= link_to "meme", "#" %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="grid text-center">
+                <div class="grid-item transition metal ium">
+                  <%= link_to image_tag("yoga2.jpg"), "#" %>
+                  <div class="grid_hover_area text-center">
+                    <div class="grid_hover_text m-top-110">
+                      <h4 class="text-white"><%= link_to "meme", "#" %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="grid text-center">
+                <div class="grid-item transition metal ium">
+                  <%= link_to image_tag("yoga2.jpg"), "#" %>
+                  <div class="grid_hover_area text-center">
+                    <div class="grid_hover_text m-top-110">
+                      <h4 class="text-white"><%= link_to "meme", "#" %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gallery" class="gallery margin-top-120 bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="main-gallery roomy-80">
+          <div class="col-md-12">
+            <div class="head_title text-left sm-text-center wow fadeInDown">
+              <h2><%= "Bệnh viện nhà nước" %></h2>
+              <h5><em><%= "Lorem Inspum" %></em></h5>
+              <div class="separator_left"></div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="col-md-4">
+              <div class="grid text-center">
+                <div class="grid-item transition metal ium">
+                  <%= link_to image_tag("yoga2.jpg"), "#" %>
+                  <div class="grid_hover_area text-center">
+                    <div class="grid_hover_text m-top-110">
+                      <h4 class="text-white"><%= link_to "meme", "#" %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="grid text-center">
+                <div class="grid-item transition metal ium">
+                  <%= link_to image_tag("yoga2.jpg"), "#" %>
+                  <div class="grid_hover_area text-center">
+                    <div class="grid_hover_text m-top-110">
+                      <h4 class="text-white"><%= link_to "meme", "#" %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="grid text-center">
+                <div class="grid-item transition metal ium">
+                  <%= link_to image_tag("yoga2.jpg"), "#" %>
+                  <div class="grid_hover_area text-center">
+                    <div class="grid_hover_text m-top-110">
+                      <h4 class="text-white"><%= link_to "meme", "#" %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gallery" class="gallery margin-top-120 bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="main-gallery roomy-80">
+          <div class="col-md-12">
+            <div class="head_title text-left sm-text-center wow fadeInDown">
+              <h2><%= "Bệnh viện nhà nước" %></h2>
+              <h5><em><%= "Lorem Inspum" %></em></h5>
+              <div class="separator_left"></div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="col-md-4">
+              <div class="grid text-center">
+                <div class="grid-item transition metal ium">
+                  <%= link_to image_tag("yoga2.jpg"), "#" %>
+                  <div class="grid_hover_area text-center">
+                    <div class="grid_hover_text m-top-110">
+                      <h4 class="text-white"><%= link_to "meme", "#" %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="grid text-center">
+                <div class="grid-item transition metal ium">
+                  <%= link_to image_tag("yoga2.jpg"), "#" %>
+                  <div class="grid_hover_area text-center">
+                    <div class="grid_hover_text m-top-110">
+                      <h4 class="text-white"><%= link_to "meme", "#" %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="grid text-center">
+                <div class="grid-item transition metal ium">
+                  <%= link_to image_tag("yoga2.jpg"), "#" %>
+                  <div class="grid_hover_area text-center">
+                    <div class="grid_hover_text m-top-110">
+                      <h4 class="text-white"><%= link_to "meme", "#" %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- scroll up-->
+  <div class="scrollup">
+    <a href="#"><i class="fa fa-chevron-up"></i></a>
+  </div><!-- End off scroll up -->
+</div>
